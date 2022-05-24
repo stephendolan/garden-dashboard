@@ -1,10 +1,10 @@
 module.exports = {
   content: [
-    './src/**/*.{html,md,liquid,erb,serb}',
-    './frontend/javascript/**/*.js',
+    "./src/**/*.{html,md,liquid,erb,serb}",
+    "./frontend/javascript/**/*.js",
   ],
   theme: {
     extend: {},
   },
   plugins: [],
-}
+};
