@@ -41,8 +41,8 @@ layout: default
 
   <div class="space-y-4 md:space-y-0 md:grid grid-cols-2 gap-4">
     <div class="bg-green-300 bg-opacity-90 space-x-4 py-8 sm:py-12 flex items-center <%= grid_card_classes %>">
-      <% first_frost_date = next_occurring_date(Date.parse("April 3")) %>
-      <% days_until_first_frost = (first_frost_date - Date.today).to_i %>
+      <% last_frost_date = next_occurring_date(Date.parse("April 3")) %>
+      <% days_until_last_frost = (last_frost_date - Date.today).to_i %>
 
       <svg xmlns="http://www.w3.org/2000/svg" class="hidden lg:block text-green-500 text-opacity-40 h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -52,19 +52,19 @@ layout: default
         <h2 class=" text-green-900 <%= grid_title_classes %>">First Frost Date</h2>
 
         <p class="font-semibold text-opacity-90 text-green-900">
-          <%= first_frost_date.strftime(date_format) %>
+          <%= last_frost_date.strftime(date_format) %>
         </p>
       </div>
 
       <div class="text-gray-800">
-        <span class="text-5xl lg:text-7xl font-extrabold"><%= days_until_first_frost %></span>
+        <span class="text-5xl lg:text-7xl font-extrabold"><%= days_until_last_frost %></span>
         <span class="font-thin text-sm">days</span>
       </div>
     </div>
 
     <div class="bg-orange-300 bg-opacity-90 space-x-4 py-8 sm:py-12 flex items-center <%= grid_card_classes %>">
-      <% last_frost_date = next_occurring_date(Date.parse("November 3")) %>
-      <% days_until_last_frost = (last_frost_date - Date.today).to_i %>
+      <% first_frost_date = next_occurring_date(Date.parse("November 3")) %>
+      <% days_until_first_frost = (first_frost_date - Date.today).to_i %>
 
       <svg xmlns="http://www.w3.org/2000/svg" class="hidden lg:block text-orange-500 text-opacity-40 h-24 w-24" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
         <path stroke-linecap="round" stroke-linejoin="round" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
@@ -74,12 +74,12 @@ layout: default
         <h2 class="text-orange-900 <%= grid_title_classes %>">Last Frost Date</h2>
 
         <p class="font-semibold text-opacity-90 text-orange-900">
-          <%= last_frost_date.strftime(date_format) %>
+          <%= first_frost_date.strftime(date_format) %>
         </p>
       </div>
 
       <div class="text-gray-800">
-        <span class="text-5xl lg:text-7xl font-extrabold"><%= days_until_last_frost %></span>
+        <span class="text-5xl lg:text-7xl font-extrabold"><%= days_until_first_frost %></span>
         <span class="font-thin text-sm">days</span>
       </div>
     </div>
