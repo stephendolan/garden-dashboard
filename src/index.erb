@@ -40,7 +40,7 @@ layout: default
   <% date_format = "%A, %B %e %Y" %>
 
   <div class="space-y-4 md:space-y-0 md:grid grid-cols-2 gap-4">
-    <div class="bg-green-300 py-12 <%= grid_card_classes %>">
+    <div class="bg-green-300 bg-opacity-90 py-12 <%= grid_card_classes %>">
       <% first_frost_date = next_occurring_date(Date.parse("April 3")) %>
       <% days_until_first_frost = (first_frost_date - Date.today).to_i %>
 
@@ -62,7 +62,7 @@ layout: default
       </div>
     </div>
 
-    <div class="bg-orange-300 py-12 <%= grid_card_classes %>">
+    <div class="bg-orange-300 bg-opacity-90 py-12 <%= grid_card_classes %>">
       <% last_frost_date = next_occurring_date(Date.parse("November 3")) %>
       <% days_until_last_frost = (last_frost_date - Date.today).to_i %>
 
