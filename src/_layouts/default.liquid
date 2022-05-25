@@ -5,14 +5,10 @@
   {% render "head", metadata: site.metadata, title: page.title %}
 </head>
 
-<body class="">
-  {% render "navbar", metadata: site.metadata, resource: resource %}
-
+<body class="bg-gray-600">
   <main>
     {{ content }}
   </main>
-
-  {% render "footer", metadata: site.metadata %}
 </body>
 
 </html>
