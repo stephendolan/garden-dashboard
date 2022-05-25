@@ -1,7 +1,7 @@
 class Builders::WeatherFetcher < SiteBuilder
   def build
     helper :fetch_weather_forecast do |additional_flags|
-      response = fetch("https://wttr.in/Smyrna+Georgia?1QFTA#{additional_flags}")
+      response = fetch("https://wttr.in/Smyrna+Georgia?QFTA#{additional_flags}")
 
       response.body
     end
